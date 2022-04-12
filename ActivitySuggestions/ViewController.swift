@@ -9,11 +9,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var activityLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        getNewActivity()
     }
 
-
+    @IBAction func suggestionButtonPressed() {
+        getNewActivity()
+    }
+    
+    private func getNewActivity() {
+        NetworkManager.shared.fetchActivity(from: Link.ActivitySuggestionsLink.rawValue) { result in
+            switch result {
+            case .success(let activity):
+                self.activityLabel.text = activity.description
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    
 }
+
 
