@@ -62,17 +62,65 @@
 		1F8EE82B280604C300A79A68 /* ActivitySuggestions */ = {
 			isa = PBXGroup;
 			children = (
-				1F8EE82C280604C300A79A68 /* AppDelegate.swift */,
-				1F8EE82E280604C300A79A68 /* SceneDelegate.swift */,
-				1F8EE830280604C300A79A68 /* ViewController.swift */,
-				1F8EE832280604C300A79A68 /* Main.storyboard */,
-				1F8EE835280604C500A79A68 /* Assets.xcassets */,
-				1F8EE837280604C500A79A68 /* LaunchScreen.storyboard */,
-				1F8EE83A280604C500A79A68 /* Info.plist */,
-				1F8EE8402806077C00A79A68 /* Activity.swift */,
-				1F8EE8422806079500A79A68 /* NetworkManager.swift */,
+				1F8EE8482806A25E00A79A68 /* ViewControllers */,
+				1F8EE84B2806A2BF00A79A68 /* Models */,
+				1F8EE84C2806A2F800A79A68 /* Servises */,
+				1F8EE84A2806A2A600A79A68 /* Storyboards */,
+				1F8EE8492806A27300A79A68 /* Resorses */,
+				1F8EE8472806A24300A79A68 /* App */,
 			);
 			path = ActivitySuggestions;
+			sourceTree = "<group>";
+		};
+		1F8EE8472806A24300A79A68 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1F8EE82C280604C300A79A68 /* AppDelegate.swift */,
+				1F8EE82E280604C300A79A68 /* SceneDelegate.swift */,
+				1F8EE83A280604C500A79A68 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1F8EE8482806A25E00A79A68 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F8EE830280604C300A79A68 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1F8EE8492806A27300A79A68 /* Resorses */ = {
+			isa = PBXGroup;
+			children = (
+				1F8EE835280604C500A79A68 /* Assets.xcassets */,
+			);
+			path = Resorses;
+			sourceTree = "<group>";
+		};
+		1F8EE84A2806A2A600A79A68 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1F8EE832280604C300A79A68 /* Main.storyboard */,
+				1F8EE837280604C500A79A68 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1F8EE84B2806A2BF00A79A68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F8EE8402806077C00A79A68 /* Activity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F8EE84C2806A2F800A79A68 /* Servises */ = {
+			isa = PBXGroup;
+			children = (
+				1F8EE8422806079500A79A68 /* NetworkManager.swift */,
+			);
+			path = Servises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6T3C77J6JN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ActivitySuggestions/Info.plist;
+				INFOPLIST_FILE = ActivitySuggestions/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,7 +383,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6T3C77J6JN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ActivitySuggestions/Info.plist;
+				INFOPLIST_FILE = ActivitySuggestions/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

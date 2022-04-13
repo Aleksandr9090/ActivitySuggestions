@@ -29,7 +29,6 @@ struct Activity: Decodable {
     """
     }
     
-    
     init(activity: String, type: String, participants: Int, price: Double, link: String, key: String, accessibility: Double) {
         self.activity = activity
         self.type = type
@@ -57,8 +56,6 @@ struct Activity: Decodable {
         let activity = Activity(activityData: activityData)
         return activity
     }
-    
-    
 }
 
 enum Link: String {
