@@ -13,11 +13,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNewActivity()
+        getAlamofireActivity()
     }
 
     @IBAction func suggestionButtonPressed() {
-        getNewActivity()
+        getAlamofireActivity()
     }
     
     private func getNewActivity() {
@@ -31,6 +31,16 @@ class ViewController: UIViewController {
         }
     }
     
+    private func getAlamofireActivity() {
+        NetworkManager.shared.fetchAlamofireActivity(Link.ActivitySuggestionsLink.rawValue) { result in
+            switch result {
+            case .success(let activity):
+                self.activityLabel.text = activity.description
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
 }
 
