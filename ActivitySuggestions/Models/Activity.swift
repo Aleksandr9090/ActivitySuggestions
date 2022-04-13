@@ -9,23 +9,23 @@ import Foundation
 
 struct Activity: Decodable {
     
-    let activity: String
-    let type: String
-    let participants: Int
-    let price: Double
-    let link: String
-    let key: String
-    let accessibility: Double
+    let activity: String?
+    let type: String?
+    let participants: Int?
+    let price: Double?
+    let link: String?
+    let key: String?
+    let accessibility: Double?
     
     var description: String {
         """
-    Activity: \(activity)
-    Type: \(type)
-    Participants: \(participants)
-    Price: \(price)
-    Link: \(link)
-    Key: \(key)
-    Accessibility: \(accessibility)
+    Activity: \(activity ?? "")
+    Type: \(type ?? "")
+    Participants: \(participants ?? 0)
+    Price: \(price ?? 0)
+    Link: \(link ?? "")
+    Key: \(key ?? "")
+    Accessibility: \(accessibility ?? 0)
     """
     }
     
@@ -53,6 +53,7 @@ struct Activity: Decodable {
         guard let activityData = value as? [String: Any] else {
             return Activity(activity: "", type: "", participants: 0, price: 0, link: "", key: "", accessibility: 0)
         }
+        //не сообразил как nil вернуть в ветке else 😥
         let activity = Activity(activityData: activityData)
         return activity
     }
