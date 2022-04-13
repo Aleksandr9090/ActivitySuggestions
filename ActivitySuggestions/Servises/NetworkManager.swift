@@ -50,7 +50,7 @@ class NetworkManager {
             .responseJSON { dataResponse in
                 switch dataResponse.result {
                 case .success(let value):
-                    let activity = Activity.getActivity(from: value)
+                    guard let activity = Activity.getActivity(from: value) else { return }
                     completion(.success(activity))
                 case .failure(let error):
                     print(error)

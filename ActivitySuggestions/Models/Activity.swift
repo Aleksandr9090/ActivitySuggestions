@@ -49,11 +49,8 @@ struct Activity: Decodable {
         accessibility = activityData["accessibility"] as? Double ?? 0
     }
     
-    static func getActivity(from value: Any) -> Activity {
-        guard let activityData = value as? [String: Any] else {
-            return Activity(activity: "", type: "", participants: 0, price: 0, link: "", key: "", accessibility: 0)
-        }
-        //не сообразил как nil вернуть в ветке else 😥
+    static func getActivity(from value: Any) -> Activity? {
+        guard let activityData = value as? [String: Any] else { return nil}
         let activity = Activity(activityData: activityData)
         return activity
     }
